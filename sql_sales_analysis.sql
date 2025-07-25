@@ -1,45 +1,27 @@
-# Retail Sales Analysis – SQL Project
+#sql retail sales analysis
 
-This project performs **end-to-end data analysis** on a retail sales dataset using **MySQL**. It demonstrates **data cleaning, exploration, and solving key business problems** using SQL queries. The goal is to derive actionable insights such as **top customers, best-selling categories, seasonal trends, and profit margins**.
+create database sql_project_p2;
 
----
-
-## 📂 Project Overview
-
-- **Database Used:** MySQL  
-- **Dataset:** Retail sales transactions (customer demographics, sales amount, category, quantity, etc.)  
-- **Objective:** Analyze sales data to answer business questions like:
-  - Which categories generate maximum revenue?
-  - Who are the top customers?
-  - What are the best selling months and peak sales hours?
-  - What is the profit margin per category?
-
----
-
-## Steps Performed
-
-### 1. Database Creation & Table Setup
-```sql
-CREATE DATABASE sql_project_p2;
-USE sql_project_p2;
-
-CREATE TABLE retail_sales (
-   transactions_id INT PRIMARY KEY,
-   sale_date DATE,
+use sql_project_p2;
+create table retail_sales
+(
+   transactions_id int primary key,
+   sale_date DATE,	
    sale_time TIME,
-   customer_id INT,
-   gender VARCHAR(15),
-   age INT,
-   category VARCHAR(15),
-   quantity INT,
-   price_per_unit FLOAT,
+   customer_id	int ,
+   gender	VARCHAR(15),
+   age	INT,
+   category	VARCHAR(15),
+   quantity	 INT,
+   price_per_unit	FLOAT,
    cogs FLOAT,
-   total_sale FLOAT
-);
+   total_sale float);
 
+select count(*) from retail_sales;
+
+select * from retail_sales;
 
 #data cleaning
-
 select * from 
 retail_sales
 where 
@@ -114,7 +96,7 @@ WHERE category = 'Clothing'
 
 
 
---# Q.3 Write a SQL query to calculate the total sales (total_sale) for each category.
+# Q.3 Write a SQL query to calculate the total sales (total_sale) for each category.
 
  
  
@@ -342,6 +324,25 @@ ORDER BY orders DESC;
 
 
 
-#Author - Gourav Das
 
-linkedin -' https://www.linkedin.com/in/gourav-das-103a6424a/'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
