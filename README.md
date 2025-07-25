@@ -18,7 +18,7 @@ This project performs **end-to-end data analysis** on a retail sales dataset usi
 
 ## Steps Performed
 
-# 1. Database Creation & Table Setup
+
 ```sql
 CREATE DATABASE sql_project_p2;
 USE sql_project_p2;
